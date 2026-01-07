@@ -51,7 +51,7 @@ This project focuses on implementing core Django concepts with clean backend log
   <li>Template Inheritance</li>
   <li>Dynamic Content Rendering</li>
 </ul>
-<h3>📦 Dependencies Installed</h3>
+<h2>📦 Dependencies Installed</h2>
 <ul>
   <li>Django</li>
   <li>Pillow</li>
