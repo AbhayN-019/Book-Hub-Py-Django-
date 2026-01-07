@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if messages %}
+      {% for msg in messages %}
+        <p>{{msg}}</p>
+      {% endfor%}
+    {% endif %}
+    <h1>Delete Book:</h1>
+    <h2>Id: {{book_id.id}}</h2>
+    <p>Please confirm the deletion of book with title-{{book_id.title}}</p>
+    <form method="POST">
+        {% csrf_token %}
+        <button>Confirm,Delete</button>
+    </form>
+    <a href="{% url 'book_list' %}"><button>Cancel</button></a>
+</body>
+</html>

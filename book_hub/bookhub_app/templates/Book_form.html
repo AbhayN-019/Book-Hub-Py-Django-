@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Book | Book Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            background: linear-gradient(
+                135deg,
+              #0f2027,
+              #203a43,
+              #2c5364
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Wrapper */
+        .wrapper {
+            width: 100%;
+            max-width: 600px;
+            padding: 40px;
+        }
+        /* Glass Card */
+        .form-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 50px 45px;
+            color: #ffffff;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+        }
+        /* Heading */
+        .form-card h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .form-card p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 30px;
+        }
+        /* Input Groups */
+        .input-group {
+            margin-bottom: 22px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+        .input-group input,
+        .input-group textarea {
+            width: 100%;
+            padding: 12px 14px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+        }
+        /* Buttons */
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .btn {
+            padding: 12px 26px;
+            font-size: 14px;
+            border-radius: 8px;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        /* Button Styles */
+        .primary {
+            background: #ffffff;
+            color: #111;
+        }
+        .outline {
+            border: 2px solid #ffffff;
+            color: #ffffff;
+            background: transparent;
+        }
+        /* Hover */
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-card">
+            <h1>Add New Book</h1>
+            <p>Fill in the details below to add a book to your library.</p>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="input-group">
+                    <label>Book Title</label>
+                    <input type="text" name="title" placeholder="Enter book title" required>
+                </div>
+                <div class="input-group">
+                    <label>Author</label>
+                    <input type="text" name="author" placeholder="Enter author name" required>
+                </div>
+                <div class="input-group">
+                    <label>Published Date</label>
+                    <input type="date" name="published_date" required>
+                </div>
+                <div class="input-group">
+                    <label>Description</label>
+                    <textarea name="description" placeholder="Short description..." rows="4"></textarea>
+                </div>
+                <div class="input-group">
+                    <label>Book Image</label>
+                    <input type="file" name="image" accept="image/*">
+                </div>
+                <div class="actions">
+                    <button type="submit" class="btn primary">Save Book</button>
+                    <a href="{% url 'home_page' %}" class="btn outline">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

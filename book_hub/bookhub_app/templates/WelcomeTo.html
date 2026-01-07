@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Book Hub | Welcome</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        height: 100vh;
+        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* Main wrapper */
+      .wrapper {
+        width: 100%;
+        max-width: 900px;
+        padding: 60px;
+      }
+      /* Content Card */
+      .content {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
+        padding: 70px 50px;
+        text-align: center;
+        color: #ffffff;
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+      }
+      /* Logo */
+      .logo {
+        font-size: 52px;
+        margin-bottom: 20px;
+      }
+      /* Title */
+      .content h1 {
+        font-size: 42px;
+        font-weight: 600;
+        margin-bottom: 18px;
+      }
+      /* Description */
+      .content p {
+        font-size: 17px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 40px;
+      }
+      /* Buttons */
+      .actions {
+        display: flex;
+        justify-content: center;
+        gap: 22px;
+      }
+      .btn {
+        padding: 14px 30px;
+        font-size: 16px;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      /* Primary Button */
+      .primary {
+        background: #ffffff;
+        color: #111;
+      }
+      /* Outline Button */
+      .outline {
+        border: 2px solid #ffffff;
+        color: #ffffff;
+      }
+      /* Hover Effects (buttons only) */
+      .btn:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div class="logo">📚</div>
+        <h1>Book Hub</h1>
+        <p>
+          Manage your books effortlessly.<br />
+          Add, explore, and organize your library in one place.
+        </p>
+        <div class="actions">
+          <a href="{% url 'add_book' %}" class="btn primary">Add Book</a>
+          <a href="{% url 'book_list' %}" class="btn outline">Show Books</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
