@@ -13,10 +13,10 @@ This project focuses on implementing core Django concepts with clean backend log
 <p>As for this feature,the app display a book where the book cover can be viewed on the left and the book detail on the right,in a instance,it likes seeing a opened book.</p>
 <img width="1916" height="988" alt="Screenshot 2026-01-06 151141" src="https://github.com/user-attachments/assets/fff0f1e4-969e-40f8-ac9b-3df5fa5321c8" />
 <b>✏️ Edit and update book information</b>
-<p>In this feature, the app displays a form where you can see alreading existing details so you can select and update the particular/specific book detail for example,title or description,In case you have entered wrong data when adding the book.</p>
+<p>In this feature, the app displays a form where you can see already existing details so you can select and update the particular/specific book detail for example,title or description,In case you have entered wrong data when adding the book.</p>
 <img width="1918" height="989" alt="Screenshot 2026-01-06 151156" src="https://github.com/user-attachments/assets/e2329068-0559-4204-9767-839163674539" />
 <b>🗑️ Manipulate book records (update/delete)</b>
-<p>As for this feature,the app allows the user to update and delete the book records from the system,as for the delete feature,you can view delete option in list page interface and single book interface, when clicking the delete option for the book,the app prompts the alter for the delete confirmation.</p>
+<p>As for this feature,the app allows the user to update and delete the book records from the system,as for the delete feature,you can view delete option in list page interface and single book interface, when clicking the delete option for the book,the app prompts the alert for the delete confirmation.</p>
 <img width="1919" height="1000" alt="Screenshot 2026-01-06 151220" src="https://github.com/user-attachments/assets/a25d64d0-9262-4601-9179-bd18456fe1d6" />
 <b>🧩 Clean UI using Django templates</b>
 <p>Clean UI using Django templates focuses on structured HTML, reusable layouts, and template inheritance to maintain consistency across pages. It ensures clear data presentation and smooth user interaction by dynamically rendering content from the backend.</p>
