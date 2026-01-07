@@ -20,6 +20,7 @@ This project focuses on implementing core Django concepts with clean backend log
 <img width="1919" height="1000" alt="Screenshot 2026-01-06 151220" src="https://github.com/user-attachments/assets/a25d64d0-9262-4601-9179-bd18456fe1d6" />
 <b>🧩 Clean UI using Django templates</b>
 <p>Clean UI using Django templates focuses on structured HTML, reusable layouts, and template inheritance to maintain consistency across pages. It ensures clear data presentation and smooth user interaction by dynamically rendering content from the backend.</p>
+<img width="1917" height="991" alt="Screenshot 2026-01-06 151114" src="https://github.com/user-attachments/assets/3cb365ed-b68a-4040-a71e-82957550c455" />
 <h2>🛠️ Tech Stack</h2>
 <ul>
   <li>**Backend:** Python, Django</li>
